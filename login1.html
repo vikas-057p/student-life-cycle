@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Student Life Cycle Management System</title>
+  <style>
+    :root{
+      --blue:#003366;
+      --light-blue:#e6f0ff;
+      --cream:#fff4e3;
+      --black:#000000;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Segoe UI,Roboto,sans-serif;}
+    body{
+      background:linear-gradient(180deg,var(--light-blue),var(--cream));
+      min-height:100vh;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+    }
+    .login-box{
+      width:100%;
+      max-width:420px;
+      background:var(--white);
+      padding:32px;
+      border-radius:30px; /* new shape */
+      box-shadow:0 10px 30px rgba(0,0,0,0.18);
+      border:2px solid rgba(0,0,0,0.05);
+    }
+    h2{
+      text-align:center;
+      color:var(--blue);
+      margin-bottom:20px;
+      font-size:26px;
+      font-weight:700;
+    }
+    label{
+      font-weight:600;
+      color:var(--black);
+    }
+    input{
+      width:100%;
+      padding:12px;
+      margin:8px 0 18px 0;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:15px;
+    }
+    button{
+      width:100%;
+      padding:13px;
+      background:var(--blue);
+      color:white;
+      border:none;
+      border-radius:25px; /* more rounded shape */
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      opacity:0.6; /* translucent */
+      transition:0.3s;
+    }
+    button:hover{
+      opacity:1; /* fully visible on hover */
+      transform:scale(1.03);
+    }
+    .links{text-align:center;margin-top:14px;font-size:14px;}
+    .links a{color:var(--blue);text-decoration:none;font-weight:600;}
+    .links a:hover{text-decoration:underline;}
+    .error-message{color:#d32f2f;font-size:13px;margin-top:4px;display:none;}
+    /* Navigation Styles */
+    header{position:sticky;top:12px;z-index:50;padding:10px 0}
+    .nav-wrap{max-width:1100px;margin:18px auto;padding:10px 18px;background:rgba(255,255,255,0.65);border-radius:14px;box-shadow:0 8px 24px rgba(15,40,30,0.08);backdrop-filter: blur(6px);display:flex;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,#0059b3,#4da3ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    .brand > div:nth-child(2){display:flex;flex-direction:column}
+    .brand > div:nth-child(2) > div:first-child{font-weight:800;color:#003366}
+    .brand > div:nth-child(2) > div:last-child{font-size:12px;color:#2f6b52}
+    nav{margin-left:auto}
+    nav a{margin:0 8px;color:#003366;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a.cta{background:#003366;color:white}
+    nav a:hover{background:rgba(0,40,80,0.06)}
+    @media (max-width:900px){.nav-wrap{padding:12px}.logo{width:46px;height:46px}}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo">SLC</div>
+        <div>
+          <div style="font-weight:800;color:#003366">Student Life Cycle</div>
+          <div style="font-size:12px;color:#2f6b52">Education Department — Prototype</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about us">About us</a>
+        <a href="#articals">Articals</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#login" class="cta">Login</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label>Email Address</label>
+      <input type="email" id="username" placeholder="Enter your email (name@gmail.com)" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      <div class="error-message" id="emailError">Incorrect email address</div>
+
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="links">
+      <p>Forgot Password? <a href="#">Click here</a></p>
+      <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+  </div>
+
+  <script>
+    const emailInput = document.getElementById('username');
+    const emailError = document.getElementById('emailError');
+    const loginForm = document.getElementById('loginForm');
+    
+    // Email validation regex
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    // Check email format on input
+    emailInput.addEventListener('input', function() {
+      if(this.value && !emailRegex.test(this.value)) {
+        emailError.style.display = 'block';
+      } else {
+        emailError.style.display = 'none';
+      }
+    });
+    
+    // Handle form submission
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = emailInput.value;
+      const password = document.getElementById('password').value;
+      
+      if(!emailRegex.test(username)) {
+        emailError.style.display = 'block';
+        return;
+      }
+      
+      if(username && password) {
+        // Redirect to homepage after successful login
+        window.location.href = 'Home.html';
+      }
+    });
+  </script>
+
+</body>
+</html>

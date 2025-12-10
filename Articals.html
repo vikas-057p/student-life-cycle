@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Articles — Student Life Cycle Management System</title>
+  <meta name="description" content="Articles and guides about Student Life Cycle Management and best practices." />
+  <style>
+    :root{
+      --cream:#fff4e3;
+      --dark-green:#003366;
+      --green:#0059b3;
+      --soft-green:#4da3ff;
+      --muted:#f4f6f7;
+      --card:#ffffff;
+      --text:#000000;
+      --glass: rgba(255,255,255,0.65);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);background:linear-gradient(180deg,var(--muted),#eef6f1);line-height:1.5}
+
+    /* Navigation */
+    header{position:sticky;top:12px;z-index:50;padding:10px 0}
+    .nav-wrap{max-width:1100px;margin:18px auto;padding:10px 18px;background:var(--glass);border-radius:14px;box-shadow:0 8px 24px rgba(15,40,30,0.08);backdrop-filter: blur(6px);display:flex;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--soft-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav{margin-left:auto}
+    nav a{margin:0 8px;color:var(--dark-green);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a.cta{background:var(--dark-green);color:white}
+    nav a:hover{background:rgba(0,40,80,0.06)}
+    nav a.active{background:rgba(0,59,179,0.1);color:var(--green);font-weight:700}
+
+    /* Hero */
+    .hero{max-width:1100px;margin:26px auto;padding:28px;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,0.95),#fff);box-shadow:0 10px 30px rgba(0,40,80,0.05);display:flex;gap:20px;align-items:center}
+    .hero-left{flex:1}
+    .hero-right{width:340px}
+    .hero h1{color:var(--dark-green);margin:0;font-size:28px}
+    .hero p{margin:12px 0;color:#0a1a33}
+    .hero .search{display:flex;gap:8px;margin-top:12px}
+    .search input{flex:1;padding:10px;border-radius:10px;border:1px solid #ddd}
+    .search button{padding:10px 12px;border-radius:10px;border:0;background:var(--dark-green);color:white;cursor:pointer}
+
+    /* Articles grid */
+    .articles{max-width:1100px;margin:20px auto;padding:0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .article-card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(0,30,60,0.04);display:flex;flex-direction:column;gap:8px}
+    .article-card h3{margin:0;color:var(--dark-green);font-size:18px}
+    .article-card p{margin:0;color:#38594a;font-size:14px}
+    .meta{font-size:13px;color:#6b7a6f}
+    .tags{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+    .tag{background:#f1f6f3;color:#2b5a47;padding:6px 8px;border-radius:8px;font-size:12px}
+    .read-more{margin-top:auto;align-self:flex-start;padding:8px 12px;border-radius:8px;background:var(--green);color:white;text-decoration:none;font-weight:600}
+
+    /* Sidebar */
+    .sidebar{max-width:1100px;margin:20px auto;padding:0 18px;display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,30,60,0.04)}
+    .popular li{margin:8px 0}
+    .catBtn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:8px;border:1px solid #dfe7e2;background:#fff;color:var(--dark-green);cursor:pointer;margin-right:6px;font-size:15px}
+    .catBtn .icon{font-size:22px;line-height:1}
+    .catBtn.active{background:var(--dark-green);color:white;border-color:var(--dark-green)}
+    .popular a{color:var(--dark-green);text-decoration:none}
+    .popular a:hover{text-decoration:underline}
+    .popular .count{color:#6b7a6f;font-size:12px;margin-left:8px}
+
+    /* Chat help */
+    .ask-ai{display:inline-block;padding:10px 12px;border-radius:10px;background:var(--dark-green);color:#fff;text-decoration:none}
+
+    footer{max-width:1100px;margin:26px auto;padding:20px;border-radius:10px;background:transparent;color:#234a3b}
+
+    @media (max-width:900px){.hero{flex-direction:column}.hero-right{width:100%}.sidebar{grid-template-columns:1fr}.articles{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo">SLC</div>
+        <div>
+          <div style="font-weight:800;color:var(--dark-green)">Student Life Cycle</div>
+          <div style="font-size:12px;color:#2f6b52">Education Department — Prototype</div>
+        </div>
+      </div>
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="modules.html">Modules</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Articals.html" class="cta">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Latest Articles & Guides</h1>
+        <p>Insights, how-tos and best practices for managing student lifecycle processes — admissions, timetabling, attendance, assessments and more.</p>
+        <div class="search">
+          <input id="searchInput" placeholder="Search articles by title or content" />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div style="margin-top:12px">
+          <a class="ask-ai" href="Contact.html">Ask an Expert</a>
+        </div>
+      </div>
+      <div class="hero-right card">
+        <h3>Featured</h3>
+        <p class="meta">How to run a successful admissions drive — checklist & timeline</p>
+        <p style="margin-top:12px"><a href="Contact.html" class="ask-ai">Ask AI about Admissions</a></p>
+      </div>
+    </section>
+
+    <section class="articles" id="articlesList">
+      <!-- sample articles -->
+      <article id="a1" class="article-card" data-title="Admissions checklist" data-tags="admissions,process" data-popularity="3">
+        <h3>Admissions checklist for 2026 intake</h3>
+        <p class="meta">Published Jan 12, 2025 • 6 min read</p>
+        <p>Step-by-step guide to collect applications, verify documents, and schedule entrance tests efficiently.</p>
+        <div class="tags"><span class="tag">Admissions</span><span class="tag">Checklist</span></div>
+        <a class="read-more read-btn" href="#" data-id="a1">Read</a>
+      </article>
+
+      <article id="a2" class="article-card" data-title="Timetable optimization" data-tags="timetable,scheduling" data-popularity="5">
+        <h3>Timetable optimization techniques</h3>
+        <p class="meta">Published Feb 5, 2025 • 8 min read</p>
+        <p>Algorithms and manual strategies to prevent clashes and use rooms efficiently.</p>
+        <div class="tags"><span class="tag">Timetabling</span><span class="tag">Optimization</span></div>
+        <a class="read-more read-btn" href="#" data-id="a2">Read</a>
+      </article>
+
+      <article id="a3" class="article-card" data-title="Attendance analytics" data-tags="attendance,analytics" data-popularity="2">
+        <h3>Using attendance analytics to improve retention</h3>
+        <p class="meta">Published Mar 10, 2025 • 7 min read</p>
+        <p>How absentee trends can highlight at-risk students and inform interventions.</p>
+        <div class="tags"><span class="tag">Attendance</span><span class="tag">Analytics</span></div>
+        <a class="read-more read-btn" href="#" data-id="a3">Read</a>
+      </article>
+
+      <article id="a4" class="article-card" data-title="Assessment security" data-tags="assessments,security" data-popularity="1">
+        <h3>Best practices for secure examinations</h3>
+        <p class="meta">Published Apr 2, 2025 • 5 min read</p>
+        <p>Tools and processes to maintain integrity during online and offline exams.</p>
+        <div class="tags"><span class="tag">Assessments</span><span class="tag">Security</span></div>
+        <a class="read-more read-btn" href="#" data-id="a4">Read</a>
+      </article>
+    </section>
+
+    <section class="sidebar">
+      <div class="card">
+        <h3>Categories</h3>
+        <div style="margin-top:8px">
+          <button class="catBtn" data-cat="all"><span class="icon">📚</span><span class="label">All</span></button>
+          <button class="catBtn" data-cat="admissions"><span class="icon">🎓</span><span class="label">Admissions</span></button>
+          <button class="catBtn" data-cat="timetable"><span class="icon">🗓️</span><span class="label">Timetabling</span></button>
+          <button class="catBtn" data-cat="attendance"><span class="icon">✅</span><span class="label">Attendance</span></button>
+          <button class="catBtn" data-cat="assessments"><span class="icon">📝</span><span class="label">Assessments</span></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Popular articles</h3>
+        <ul id="popularList" class="popular">
+          <!-- populated dynamically by popularity -->
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:26px auto;padding:20px;border-radius:10px;background:transparent;color:#234a3b;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>
+        <strong>Student Life Cycle Management System</strong><br />Education Department Prototype — © 2025
+      </div>
+      <div style="font-size:13px;color:#2f6b52">
+        <a href="Home.html" style="color:#2f6b52;text-decoration:none;margin-right:16px">Home</a>
+        <a href="modules.html" style="color:#2f6b52;text-decoration:none;margin-right:16px">Modules</a>
+        <a href="Contact.html" style="color:#2f6b52;text-decoration:none">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple search and filter for demo
+    const articles = Array.from(document.querySelectorAll('.article-card'));
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const catBtns = Array.from(document.querySelectorAll('.catBtn'));
+    const popularList = document.getElementById('popularList');
+    const readBtns = Array.from(document.querySelectorAll('.read-btn'));
+
+    function filterArticles(query='', category='all'){
+      const q = query.trim().toLowerCase();
+      articles.forEach(a => {
+        const title = a.dataset.title.toLowerCase();
+        const tags = a.dataset.tags.toLowerCase();
+        const matchQuery = !q || title.includes(q) || a.textContent.toLowerCase().includes(q);
+        const matchCat = category === 'all' || tags.includes(category);
+        a.style.display = (matchQuery && matchCat) ? 'flex' : 'none';
+      });
+    }
+
+    searchBtn.addEventListener('click', ()=> filterArticles(searchInput.value));
+    searchInput.addEventListener('keypress', (e)=>{ if(e.key === 'Enter'){ e.preventDefault(); filterArticles(searchInput.value); } });
+
+    catBtns.forEach(b => b.addEventListener('click', ()=>{
+      // toggle active state and filter
+      catBtns.forEach(x=>x.classList.remove('active'));
+      b.classList.add('active');
+      const cat = b.dataset.cat;
+      filterArticles(searchInput.value, cat);
+    }));
+
+    // small enhancement: show all on load
+    filterArticles();
+
+    // Populate popular list based on data-popularity attributes
+    function updatePopular(){
+      const byPopularity = articles
+        .map(a=>({id:a.id,title:a.querySelector('h3').textContent,score:parseInt(a.dataset.popularity||0)}))
+        .sort((x,y)=>y.score - x.score)
+        .slice(0,5);
+      popularList.innerHTML = '';
+      byPopularity.forEach(item=>{
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#';
+        a.textContent = item.title;
+        a.addEventListener('click', (e)=>{
+          e.preventDefault();
+          // scroll to article
+          const art = document.getElementById(item.id);
+          if(art){ art.scrollIntoView({behavior:'smooth',block:'center'}); art.style.boxShadow='0 12px 40px rgba(0,80,120,0.12)'; setTimeout(()=>art.style.boxShadow='0 6px 20px rgba(0,30,60,0.04)',1200); }
+        });
+        const span = document.createElement('span');
+        span.className = 'count';
+        span.textContent = item.score;
+        li.appendChild(a);
+        li.appendChild(span);
+        popularList.appendChild(li);
+      });
+    }
+
+    // hook read buttons to increment popularity and update popular list
+    readBtns.forEach(b=>b.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = b.dataset.id;
+      const art = document.getElementById(id);
+      if(!art) return;
+      const cur = parseInt(art.dataset.popularity||0);
+      art.dataset.popularity = cur + 1;
+      updatePopular();
+      // optional: show a quick highlight or open detail (here we just highlight)
+      art.style.border = '2px solid rgba(0,80,120,0.08)';
+      setTimeout(()=>art.style.border='none',1200);
+    }));
+
+    // initial populate
+    updatePopular();
+  </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Us — Student Life Cycle Management System</title>
+  <meta name="description" content="Contact the Student Life Cycle Management System team or ask our expert chatbot." />
+  <style>
+    :root{
+      --cream:#fff4e3;
+      --dark-green:#003366;
+      --green:#0059b3;
+      --soft-green:#4da3ff;
+      --muted:#f4f6f7;
+      --card:#ffffff;
+      --text:#000000;
+      --glass: rgba(255,255,255,0.65);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);background:linear-gradient(180deg,var(--muted),#eef6f1);line-height:1.5}
+
+    /* Navigation */
+    header{position:sticky;top:12px;z-index:50;padding:10px 0}
+    .nav-wrap{max-width:1100px;margin:18px auto;padding:10px 18px;background:var(--glass);border-radius:14px;box-shadow:0 8px 24px rgba(15,40,30,0.08);backdrop-filter: blur(6px);display:flex;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--soft-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav{margin-left:auto}
+    nav a{margin:0 8px;color:var(--dark-green);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a.cta{background:var(--dark-green);color:white}
+    nav a:hover{background:rgba(0,40,80,0.06)}
+    nav a.active{background:rgba(0,59,179,0.1);color:var(--green);font-weight:700}
+
+    /* Page Header */
+    .page-header{max-width:1100px;margin:26px auto;padding:36px;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);box-shadow:0 10px 30px rgba(0,40,80,0.05)}
+    .page-header h1{color:var(--dark-green);margin:0;font-size:32px}
+    .page-header p{margin:12px 0 0 0;font-size:16px;color:#0a1a33}
+
+    .grid{max-width:1100px;margin:20px auto;padding:0 18px;display:grid;grid-template-columns:1fr 380px;gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,30,60,0.04)}
+
+    form label{display:block;font-weight:600;margin-top:8px}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-top:6px;font-size:14px}
+    form button{margin-top:12px;padding:10px 14px;border-radius:10px;border:0;background:var(--dark-green);color:white;font-weight:700;cursor:pointer}
+
+    .contact-details p{margin:8px 0;color:#2b5a47}
+    .faq{margin-top:12px}
+    .faq details{margin-bottom:8px}
+
+    /* Chat widget styles */
+    .chat-button{position:fixed;right:24px;bottom:24px;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--soft-green));color:white;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;cursor:pointer;box-shadow:0 8px 24px rgba(0,40,80,0.12);z-index:200}
+    .chat-panel{position:fixed;right:24px;bottom:100px;width:360px;max-height:70vh;background:white;border-radius:12px;box-shadow:0 20px 60px rgba(0,30,60,0.2);display:flex;flex-direction:column;overflow:hidden;z-index:200;}
+    .chat-header{background:linear-gradient(90deg,var(--dark-green),var(--green));color:white;padding:12px;display:flex;align-items:center;gap:10px}
+    .chat-messages{padding:12px;flex:1;overflow:auto;background:#f7fbff}
+    .msg{margin-bottom:10px;display:flex}
+    .msg.user{justify-content:flex-end}
+    .bubble{max-width:75%;padding:10px;border-radius:10px;background:white;box-shadow:0 4px 10px rgba(0,0,0,0.04)}
+    .bubble.user{background:linear-gradient(90deg,var(--green),var(--soft-green));color:white}
+    .chat-input{display:flex;padding:10px;border-top:1px solid #eee}
+    .chat-input input{flex:1;padding:10px;border-radius:8px;border:1px solid #ddd}
+    .chat-input button{margin-left:8px;padding:10px 12px;border-radius:8px;border:0;background:var(--dark-green);color:white;cursor:pointer}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.chat-panel{right:12px;left:12px;width:auto;bottom:90px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo">SLC</div>
+        <div>
+          <div style="font-weight:800;color:var(--dark-green)">Student Life Cycle</div>
+          <div style="font-size:12px;color:#2f6b52">Education Department — Prototype</div>
+        </div>
+      </div>
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="modules.html">Modules</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html" class="active">Contact Us</a>
+        <a href="login1.html" class="cta">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Contact & Support</h1>
+      <p>Need help? Contact our team or ask the expert using the chat assistant available 24/7 for quick guidance.</p>
+    </section>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2>Get in touch</h2>
+          <p>Use the form below to reach our team — we typically respond within 1-2 business days.</p>
+          <form id="contactForm">
+            <label for="name">Full name</label>
+            <input id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="name@gmail.com" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            <div id="emailError" style="color:#d32f2f;font-size:13px;display:none;margin-top:6px">Incorrect email address</div>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+
+            <button type="submit">Send message</button>
+            <div id="contactSuccess" style="margin-top:10px;color:var(--green);display:none">Thanks — your message has been received.</div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>FAQ</h2>
+          <div class="faq">
+            <details>
+              <summary>How do I request a demo?</summary>
+              <p style="margin:8px 0">Click the "Explore Modules" or use the contact form to request a demo. We'll schedule a time to walk you through the system.</p>
+            </details>
+            <details>
+              <summary>Can I migrate existing student records?</summary>
+              <p style="margin:8px 0">Yes — we offer data migration services and tools for importing records from common formats.</p>
+            </details>
+            <details>
+              <summary>Is my data secure?</summary>
+              <p style="margin:8px 0">We follow best practices for encryption, role-based access and audit logging to protect student data.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card contact-details">
+          <h3>Contact details</h3>
+          <p><strong>Email:</strong> <a href="mailto:edu-dept@demo.org">edu-dept@demo.org</a></p>
+          <p><strong>Phone:</strong> +91 99999 00000</p>
+          <p><strong>Address:</strong> Education Department, City Center</p>
+
+          <h4 style="margin-top:12px">Quick actions</h4>
+          <p style="margin:8px 0"><a href="modules.html" style="color:var(--green);text-decoration:none">Explore modules</a></p>
+          <p style="margin:8px 0"><a href="About.html" style="color:var(--green);text-decoration:none">About the project</a></p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Ask the Expert</h3>
+          <p>Use our demo chatbot to get instant, science-backed answers. This is a local demo — replace with real AI integration in production.</p>
+          <p style="margin-top:12px"><button id="openChat" style="padding:10px 12px;border-radius:8px;background:var(--dark-green);color:#fff;border:0;cursor:pointer">Ask the Expert Now</button></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width:1100px;margin:26px auto;padding:20px;border-radius:10px;background:transparent;color:#234a3b;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>
+        <strong>Student Life Cycle Management System</strong><br />Education Department Prototype — © 2025
+      </div>
+      <div style="font-size:13px;color:#2f6b52">
+        <a href="Home.html" style="color:#2f6b52;text-decoration:none;margin-right:16px">Home</a>
+        <a href="modules.html" style="color:#2f6b52;text-decoration:none;margin-right:16px">Modules</a>
+        <a href="About.html" style="color:#2f6b52;text-decoration:none">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat button + panel -->
+  <div class="chat-button" id="chatToggle">💬</div>
+  <div class="chat-panel" id="chatPanel" style="display:none">
+    <div class="chat-header">
+      <div style="font-weight:800">Ask an Expert</div>
+      <div style="margin-left:auto;cursor:pointer" id="closeChat">✕</div>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot"><div class="bubble">Hi — I'm the demo expert. Ask about admissions, timetabling, attendance or assessments.</div></div>
+    </div>
+    <div class="chat-input">
+      <input id="chatInput" placeholder="Type your question..." />
+      <button id="sendChat">Send</button>
+    </div>
+  </div>
+
+  <script>
+    // TODO: Replace demo chatbot with real AI backend integration when available.
+    const chatToggle = document.getElementById('chatToggle');
+    const chatPanel = document.getElementById('chatPanel');
+    const closeChat = document.getElementById('closeChat');
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const sendChat = document.getElementById('sendChat');
+    const openChatBtn = document.getElementById('openChat');
+
+    function openChat(){ chatPanel.style.display = 'flex'; chatInput.focus(); }
+    function closeChatPanel(){ chatPanel.style.display = 'none'; }
+
+    chatToggle.addEventListener('click', openChat);
+    closeChat.addEventListener('click', closeChatPanel);
+    openChatBtn.addEventListener('click', openChat);
+
+    function appendMessage(text, who='bot'){
+      const m = document.createElement('div');
+      m.className = 'msg ' + (who==='user' ? 'user' : 'bot');
+      const b = document.createElement('div');
+      b.className = 'bubble ' + (who==='user' ? 'user' : 'bot');
+      b.textContent = text;
+      m.appendChild(b);
+      chatMessages.appendChild(m);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function botReply(userText){
+      // Simple rule-based replies for demo purposes
+      const text = userText.toLowerCase();
+      if(/hello|hi|hey/.test(text)) return "Hello — how can I help you today?";
+      if(/admission|apply|application/.test(text)) return "Admissions: submit online application, upload documents, and schedule tests. Ask for details about forms or deadlines.";
+      if(/timetable|schedule|clash/.test(text)) return "Timetabling: the system detects clashes and can auto-generate optimized timetables based on faculty and room availability.";
+      if(/attendance|absen|present/.test(text)) return "Attendance: supports biometric and online check-ins, plus absentee notifications to parents and analytics dashboards.";
+      if(/assessment|exam|grade/.test(text)) return "Assessments: create question banks, moderate marking, and publish results with audit trails.";
+      return "Demo reply: This is a placeholder. Integrate a real AI service (OpenAI, local model, or other) for richer answers.";
+    }
+
+    sendChat.addEventListener('click', function(){
+      const val = chatInput.value.trim();
+      if(!val) return;
+      appendMessage(val, 'user');
+      chatInput.value = '';
+      appendMessage('Thinking...', 'bot');
+      // simulate processing delay
+      setTimeout(()=>{
+        // remove the last 'Thinking...' message
+        const last = chatMessages.querySelectorAll('.msg.bot .bubble');
+        if(last.length) last[last.length-1].textContent = botReply(val);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 800);
+    });
+
+    chatInput.addEventListener('keypress', function(e){ if(e.key === 'Enter'){ e.preventDefault(); sendChat.click(); } });
+
+    // Contact form validation + handling (local demo)
+    const contactForm = document.getElementById('contactForm');
+    const emailField = document.getElementById('email');
+    const emailError = document.getElementById('emailError');
+    const contactSuccess = document.getElementById('contactSuccess');
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    emailField.addEventListener('input', function(){ emailError.style.display = (this.value && !emailRegex.test(this.value)) ? 'block' : 'none'; });
+
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!emailRegex.test(emailField.value)) { emailError.style.display='block'; return; }
+      // show success message (demo only)
+      contactSuccess.style.display = 'block';
+      contactForm.reset();
+      setTimeout(()=>{ contactSuccess.style.display = 'none'; }, 5000);
+    });
+  </script>
+</body>
+</html>

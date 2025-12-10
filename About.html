@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — Student Life Cycle Management System</title>
+  <meta name="description" content="About the Student Life Cycle Management System and the team behind it." />
+  <style>
+    :root{
+      --cream:#fff4e3;
+      --dark-green:#003366;
+      --green:#0059b3;
+      --soft-green:#4da3ff;
+      --muted:#f4f6f7;
+      --card:#ffffff;
+      --text:#000000;
+      --glass: rgba(255,255,255,0.65);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);background:linear-gradient(180deg,var(--muted),#eef6f1);line-height:1.5}
+
+    /* Navigation */
+    header{position:sticky;top:12px;z-index:50;padding:10px 0}
+    .nav-wrap{max-width:1100px;margin:18px auto;padding:10px 18px;background:var(--glass);border-radius:14px;box-shadow:0 8px 24px rgba(15,40,30,0.08);backdrop-filter: blur(6px);display:flex;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--soft-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav{margin-left:auto}
+    nav a{margin:0 8px;color:var(--dark-green);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a.cta{background:var(--dark-green);color:white}
+    nav a:hover{background:rgba(0,40,80,0.06)}
+    nav a.active{background:rgba(0,59,179,0.1);color:var(--green);font-weight:700}
+
+    /* Header */
+    .page-header{max-width:1100px;margin:26px auto;padding:36px;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);box-shadow:0 10px 30px rgba(0,40,80,0.05)}
+    .page-header h1{color:var(--dark-green);margin:0;font-size:32px}
+    .page-header p{margin:12px 0 0 0;font-size:16px;color:#0a1a33}
+
+    /* Sections */
+    .content{max-width:1100px;margin:20px auto;padding:0 18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,30,60,0.04);margin-bottom:16px}
+
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .team-member{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:#fff}
+    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--soft-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:20px}
+    .member-info h4{margin:0;color:var(--dark-green)}
+    .member-info p{margin:4px 0 0 0;color:#38594a;font-size:13px}
+
+    .values{display:flex;gap:12px;flex-wrap:wrap}
+    .value-pill{background:#fff;padding:12px;border-radius:10px;box-shadow:0 4px 12px rgba(0,30,60,0.04);min-width:180px}
+
+    footer{max-width:1100px;margin:26px auto;padding:20px;border-radius:10px;background:transparent;color:#234a3b}
+
+    @media (max-width:900px){.page-header{padding:24px}.nav-wrap{padding:12px}.logo{width:46px;height:46px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo">SLC</div>
+        <div>
+          <div style="font-weight:800;color:var(--dark-green)">Student Life Cycle</div>
+          <div style="font-size:12px;color:#2f6b52">Education Department — Prototype</div>
+        </div>
+      </div>
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="modules.html">Modules</a>
+        <a href="About.html" class="active">About</a>
+        <a href="#contact">Contact Us</a>
+        <a href="login1.html" class="cta">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>About Student Life Cycle Management System</h1>
+      <p>We build secure, scalable systems that simplify student administration and empower education stakeholders with data-driven tools.</p>
+    </section>
+
+    <div class="content">
+      <section class="card" aria-labelledby="mission">
+        <h2 id="mission">Our Mission</h2>
+        <p>To provide an integrated platform that streamlines the entire student journey — from admission and attendance to assessment and alumni engagement — while maintaining the highest standards of data privacy and usability.</p>
+      </section>
+
+      <section class="card" aria-labelledby="values">
+        <h2 id="values">Our Values</h2>
+        <div class="values">
+          <div class="value-pill">
+            <h4>Student-Centric</h4>
+            <p>Design decisions prioritize student experience and accessibility.</p>
+          </div>
+          <div class="value-pill">
+            <h4>Security First</h4>
+            <p>Data protection and role-based access are embedded by design.</p>
+          </div>
+          <div class="value-pill">
+            <h4>Scalable</h4>
+            <p>Built to support institutions of any size and scale with demand.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="team">
+        <h2 id="team">Meet the Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="avatar">AB</div>
+            <div class="member-info">
+              <h4>Pilli Bala Sushank — Product Lead</h4>
+              <p>Product strategy, education partnerships and roadmap.</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="avatar">SK</div>
+            <div class="member-info">
+              <h4>Sangepu Jaswanth Manideep — Engineering Lead</h4>
+              <p>Architecting scalable systems, integrations and deployment.</p>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <div class="avatar">RM</div>
+            <div class="member-info">
+              <h4>Sreenivasa Manivannan — UX Designer</h4>
+              <p>Design systems, accessibility and user research.</p>
+            </div>
+          </div>
+
+          
+      </section>
+
+      <section class="card" aria-labelledby="history">
+        <h2 id="history">Our Story</h2>
+        <p>Started as a small pilot to replace paper-based processes, the project evolved into a full-featured suite aimed at helping education departments manage student records, assessments and communications more efficiently.</p>
+      </section>
+
+      <section class="card" aria-labelledby="contact">
+        <h2 id="contact">Contact & Next Steps</h2>
+        <p>To schedule a demo or discuss a pilot, contact our team:</p>
+        <p style="margin-top:12px;color:#2b5a47"><strong>Email:</strong> <a href="mailto:edu-dept@demo.org" style="color:var(--green);text-decoration:none">edu-dept@demo.org</a> • <strong>Phone:</strong> +91 99999 00000</p>
+        <p style="margin-top:12px"><a href="modules.html" class="cta" style="padding:10px 12px;border-radius:8px;background:var(--dark-green);color:#fff;text-decoration:none;display:inline-block">Explore Modules</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <strong>Student Life Cycle Management System</strong><br />Education Department Prototype — © 2025
+      </div>
+      <div style="font-size:13px;color:#2f6b52">
+        <a href="Home.html" style="color:#2f6b52;text-decoration:none;margin-right:16px">Home</a>
+        <a href="modules.html" style="color:#2f6b52;text-decoration:none;margin-right:16px">Modules</a>
+        <a href="login1.html" style="color:#2f6b52;text-decoration:none">Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Minimal demo interactions
+    document.querySelectorAll('.cta').forEach(el=>el.addEventListener('click',e=>{ /* placeholder */ }));
+  </script>
+</body>
+</html>

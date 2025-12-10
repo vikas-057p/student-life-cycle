@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Life Cycle Management System — Education Dept</title>
+  <meta name="description" content="A clean, responsive single-file prototype for a Student Life Cycle Management System for an Education Department." />
+  <style>
+    /* Palette: dark green, green, soft gray */
+    :root{
+      --cream:#fff4e3; /* added cream color */
+      --dark-green:#003366;
+      --green:#0059b3;
+      --soft-green:#4da3ff;
+      --muted:#f4f6f7;
+      --card:#ffffff;
+      --text:#000000;
+      --glass: rgba(255,255,255,0.65);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;color:var(--text);background:linear-gradient(180deg,var(--muted),#eef6f1);line-height:1.5}
+
+    /* Navigation with softer/shadowed look and moved down */
+    header{position:sticky;top:12px;z-index:50;padding:10px 0}
+    .nav-wrap{max-width:1100px;margin:18px auto;padding:10px 18px;background:var(--glass);border-radius:14px;box-shadow:0 8px 24px rgba(15,40,30,0.08);backdrop-filter: blur(6px);display:flex;align-items:center;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--soft-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
+    nav{margin-left:auto}
+    nav a{margin:0 8px;color:var(--dark-green);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a.cta{background:var(--dark-green);color:white}
+    nav a:hover{background:rgba(0,40,80,0.06)}
+
+    /* Hero */
+    .hero{max-width:1100px;margin:26px auto;padding:36px;border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff);box-shadow:0 10px 30px rgba(0,40,80,0.05);display:grid;grid-template-columns:1fr 420px;gap:22px;align-items:center}
+    .hero h1{color:var(--dark-green);margin:0;font-size:28px}
+    .hero p{margin:12px 0;font-size:15px;color:#0a1a33}
+    .hero .buttons{display:flex;gap:12px;margin-top:16px}
+    .btn{padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn.primary{background:var(--dark-green);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(15,60,40,0.08)}
+
+    /* Card grid for modules */
+    .modules{max-width:1100px;margin:20px auto;padding:0 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,30,60,0.04)}
+    .card h3{margin:0 0 8px 0;color:var(--dark-green)}
+    .card p{margin:0;color:#38594a;font-size:14px}
+
+    /* Feature area */
+    .features{max-width:1100px;margin:18px auto;padding:18px;background:linear-gradient(90deg,#fff,#f8fffa);border-radius:12px}
+    .features-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .feature-item{display:flex;gap:12px;align-items:flex-start}
+    .feature-icon{width:56px;height:56px;border-radius:10px;background:var(--muted);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    /* Dashboard section removed */
+
+    footer{max-width:1100px;margin:26px auto;padding:20px;border-radius:10px;background:transparent;color:#234a3b}
+
+    /* Responsive adjustments */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.nav-wrap{padding:12px}.logo{width:46px;height:46px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo">SLC</div>
+        <div>
+          <div style="font-weight:800;color:var(--dark-green)">Student Life Cycle</div>
+          <div style="font-size:12px;color:#2f6b52">Education Department — Prototype</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about us">About us</a>
+        <a href="#articals">Articals</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#login" class="cta">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <h1>Student Life Cycle Management System</h1>
+        <p>A secure, scalable system to manage the entire student lifecycle — from admission and registration to assessments, transcripts, and alumni relations. Designed for education departments, colleges and universities.</p>
+          <div style="margin-top:18px;">
+          <strong>Key benefits:</strong>
+          <ul style="margin:8px 0 0 18px;color:#2a5747">
+            <li>End-to-end student record management</li>
+            <li>Secure role-based access for staff, faculty and students</li>
+            <li>Automated attendance and assessment workflows</li>
+            <li>Reporting and analytics for policy decisions</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside style="padding:18px">
+        <div class="card">
+          <h3>Quick Dashboard</h3>
+          <p>Snapshot: Enrolled — 8,412 | New admissions (this month) — 210</p>
+          <table class="table" style="margin-top:12px;font-size:14px">
+            <thead>
+              <tr><th>Class</th><th>Enrolled</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Grade 10</td><td>1,224</td><td><span class="pill green">Active</span></td></tr>
+              <tr><td>Grade 11</td><td>1,108</td><td><span class="pill green">Active</span></td></tr>
+              <tr><td>Grade 12</td><td>980</td><td><span class="pill yellow">Exam Pending</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+    </section>
+
+    <section id="modules" class="modules" aria-label="Modules">
+      <div class="card">
+        <h3>Admissions</h3>
+        <p>Online application intake, document verification, entrance test scheduling and merit lists.</p>
+      </div>
+      <div class="card">
+        <h3>Registration & Timetabling</h3>
+        <p>Course registration, clash detection, and automated timetable generation.</p>
+      </div>
+      <div class="card">
+        <h3>Attendance</h3>
+        <p>Biometric or online attendance, absence tracking and parental notifications.</p>
+      </div>
+      <div class="card">
+        <h3>Assessments & Exams</h3>
+        <p>Exam creation, grading workflows, moderated marking and result publishing.</p>
+      </div>
+      <div class="card">
+        <h3>Academic Records & Transcripts</h3>
+        <p>Secure, verifiable transcripts with export (PDF) and digital signatures.</p>
+      </div>
+      <div class="card">
+        <h3>Alumni & Placements</h3>
+        <p>Alumni directory, placement drives, and employer relationships management.</p>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <h2 style="margin:0 0 12px 0;color:var(--dark-green)">Why this system?</h2>
+      <div class="features-grid">
+        <div>
+          <div class="feature-item">
+            <div class="feature-icon">S</div>
+            <div>
+              <h4 style="margin:0;color:var(--green)">Scalability & Performance</h4>
+              <p>Multi-tenant capable design to onboard schools and colleges with large student populations.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="margin-top:12px">
+            <div class="feature-icon">P</div>
+            <div>
+              <h4 style="margin:0;color:var(--green)">Privacy & Security</h4>
+              <p>Role-based access, encrypted records and audit trails to comply with data-protection laws.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="margin-top:12px">
+            <div class="feature-icon">I</div>
+            <div>
+              <h4 style="margin:0;color:var(--green)">Integration</h4>
+              <p>APIs for identity providers, payment gateways, LMS and reporting tools.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature-item">
+            <div class="feature-icon">A</div>
+            <div>
+              <h4 style="margin:0;color:var(--green)">Analytics & Reports</h4>
+              <p>Pre-built dashboards for enrollment trends, attendance heatmaps and performance analytics.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="margin-top:12px">
+            <div class="feature-icon">U</div>
+            <div>
+              <h4 style="margin:0;color:var(--green)">User Experience</h4>
+              <p>Student and parent portals, faculty center, and mobile-first design for easy access.</p>
+            </div>
+          </div>
+
+          <div class="feature-item" style="margin-top:12px">
+            <div class="feature-icon">C</div>
+            <div>
+              <h4 style="margin:0;color:var(--green)">Compliance & Configurability</h4>
+              <p>Custom grading schemes, government reporting templates and configurable admission rules.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="max-width:1100px;margin:18px auto;padding:18px">
+      <div class="card">
+        <h3>Contact & Next Steps</h3>
+        <p>If you're building this for a department or college, here's a recommended rollout:</p>
+        <ol style="margin-left:18px;color:#2b5a47">
+          <li>Requirements gathering with stakeholders (2–4 weeks)</li>
+          <li>Pilot with one school/college (6–8 weeks)</li>
+          <li>Iterate based on feedback, integrate with LMS and finance systems</li>
+          <li>Region-wide rollout and training</li>
+        </ol>
+
+        <p style="margin-top:12px">Email: <a href="mailto:edu-dept@demo.org">edu-dept@demo.org</a> • Phone: +91 99999 00000</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <strong>Student Life Cycle Management System</strong><br />Education Department Prototype — © 2025
+      </div>
+      <div style="font-size:13px;color:#2f6b52">
+        Built as a single-file prototype. Ask me to convert to a multi-page React app or add authentication forms.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Small interactive demo actions
+    document.querySelectorAll('.btn').forEach(b=>b.addEventListener('click',()=>alert('Demo action — replace with real integration.')))
+  </script>
+</body>
+
+
+
+
+</html>
